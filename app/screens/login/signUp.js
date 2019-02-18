@@ -30,15 +30,15 @@ export class SignUp extends React.Component {
   );
 
   renderImage = () => (
-    <Image style={styles.image} source={this.getThemeImageSource(RkTheme.current)} />
+    <Image style={styles.image} source={require('../../assets/images/splashBack.png')} />
   );
 
   onSignUpButtonPressed = () => {
-    this.props.navigation.goBack();
+    this.props.navigation.navigate('Home');
   };
 
   onSignInButtonPressed = () => {
-    this.props.navigation.navigate('Login1');
+    this.props.navigation.navigate('Home');
   };
 
   render = () => (
@@ -48,7 +48,7 @@ export class SignUp extends React.Component {
       onResponderRelease={() => Keyboard.dismiss()}>
       <View style={{ alignItems: 'center' }}>
         {this.renderImage()}
-        <RkText rkType='h1'>Registration</RkText>
+        <RkText style={{marginTop: 20}} rkType='h1'>Registration</RkText>
       </View>
       <View style={styles.content}>
         <View>

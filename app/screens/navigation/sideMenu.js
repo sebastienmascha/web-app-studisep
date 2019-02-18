@@ -31,7 +31,7 @@ export class SideMenu extends React.Component {
   );
 
   renderIcon = () => (
-    <Image style={styles.icon} source={this.getThemeImageSource(RkTheme.current)} />
+    <Image style={styles.icon} source={require('../../assets/images/logoNumeris.png')} />
   );
 
   renderMenu = () => MainRoutes.map(this.renderMenuItem);
@@ -62,7 +62,7 @@ export class SideMenu extends React.Component {
         showsVerticalScrollIndicator={false}>
         <View style={[styles.container, styles.content]}>
           {this.renderIcon()}
-          <RkText rkType='logo'>UI Kitten</RkText>
+          <RkText rkType='logo'>By Numeris</RkText>
         </View>
         {this.renderMenu()}
       </ScrollView>
@@ -87,6 +87,9 @@ const styles = RkStyleSheet.create(theme => ({
     alignItems: 'center',
   },
   icon: {
-    marginRight: 13,
+    resizeMode: 'contain',
+    marginRight: 23,
+    width: 60,
+    height: 60,
   },
 }));

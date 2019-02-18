@@ -53,21 +53,24 @@ export class SplashScreen extends React.Component {
     StatusBar.setHidden(false, 'slide');
     const toHome = StackActions.reset({
       index: 0,
-      actions: [NavigationActions.navigate({ routeName: 'Home' })],
+      actions: [NavigationActions.navigate({ routeName: 'Login' })],
     });
     this.props.navigation.dispatch(toHome);
   };
 
   render = () => (
     <View style={styles.container}>
-      <View>
+      <View style={{justifyContent: 'center', alignItems: 'center',}}>
         <Image
-          style={[styles.image, { width: Dimensions.get('window').width }]}
+          style={[styles.image, { width: (Dimensions.get('window').width) / 2 }]}
           source={require('../../assets/images/splashBack.png')}
         />
         <View style={styles.text}>
-          <RkText rkType='light' style={styles.hero}>React Native</RkText>
-          <RkText rkType='logo' style={styles.appName}>UI Kitten</RkText>
+          <RkText rkType='light' style={styles.hero}>Numéris</RkText>
+          <RkText rkType='light' style={{fontSize: 30, marginTop: 20}}>Projet associatif</RkText>
+
+          <RkText rkType='light' style={{fontSize: 20, marginTop: 100}}>Sébastien MASCHA</RkText>
+          <RkText rkType='light' style={{fontSize: 20, marginTop: 10}}>Thomas LECOUÉDIC</RkText>
         </View>
       </View>
       <ProgressBar
@@ -87,8 +90,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   image: {
-    resizeMode: 'cover',
-    height: scaleVertical(430),
+    resizeMode: 'contain',
+    height: scaleVertical(230),
   },
   text: {
     alignItems: 'center',

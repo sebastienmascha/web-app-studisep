@@ -15,11 +15,11 @@ const images = [
 
 const users = [{
   id: 1,
-  firstName: 'Helen',
-  lastName: 'Gilbert',
-  phone: '+1 415 670 90 34',
-  country: 'Belarus',
-  email: 'h.gilbert@akveo.com',
+  firstName: 'Seb',
+  lastName: 'Mascha',
+  phone: '+33 6 48 75 29 08',
+  country: 'Lyon',
+  email: 'sebastien.mascha@icloud.com',
   password: '123456',
   newPassword: '12345678',
   confirmPassword: '12345678',
@@ -80,8 +80,8 @@ const users = [{
 },
 {
   id: 5,
-  firstName: 'Clayton',
-  lastName: 'O\'Mullaney',
+  firstName: 'Thomas',
+  lastName: 'Lecouédic',
   email: 'cmullaney4@tripadvisor.com',
   country: 'Philippines',
   password: 'ZlzECwoN',

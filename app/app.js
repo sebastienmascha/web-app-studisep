@@ -22,6 +22,9 @@ const KittenApp = createStackNavigator({
   First: {
     screen: Screens.SplashScreen,
   },
+  Login: {
+    screen: Screens.SignUp,
+  },
   Home: {
     screen: createDrawerNavigator(
       {
@@ -37,7 +40,7 @@ const KittenApp = createStackNavigator({
   },
 }, {
   headerMode: 'none',
-});
+}); 
 
 export default class App extends React.Component {
   state = {
@@ -46,6 +49,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     this.loadAssets();
+    console.disableYellowBox = true;
   }
 
   onNavigationStateChange = (previous, current) => {
